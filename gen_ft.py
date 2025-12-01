@@ -163,7 +163,7 @@ def analyze_msa_list(msa_files, output_csv="msa_features_output.csv", alphabet="
                 f"Processed {filepath}: PI%={pis_pct:.2f}, Var%={var_pct:.2f}, RCV={rcv:.2f}, RCVT={rcvt:.2f}, Treeness={treeness:.2f}, LB Score={lb_score:.2f}, ce_std={ce_std:.4f}"
             )
             row = {
-                "filename": os.path.basename(filepath),
+                "filename": filepath,
                 "% parsimony-informative": pis_pct,
                 "% variable": var_pct,
                 "RCV": rcv,

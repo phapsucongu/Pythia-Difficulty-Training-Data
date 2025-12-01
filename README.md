@@ -47,9 +47,9 @@ python gen_ft.py --input-dir output ^
 ```
 
 
-## Rogue Scores and CI (gen_tree.py)
+## CI (gen_tree.py)
 
-`gen_tree.py` generates a set of proxy parsimony trees per alignment, computes simple rogue/instability statistics and a Fitch-consistency index (CI), and saves the trees.
+`gen_tree.py` generates a set of proxy parsimony trees per alignment, computes a Fitch-consistency index (CI), and saves the trees.
 
 - Input directory default: `output`
 - Output CSV default: `rogue_ci_summary.csv`

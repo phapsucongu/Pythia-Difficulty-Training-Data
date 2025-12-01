@@ -13,7 +13,6 @@ There is also a [SQLite](https://www.sqlite.org/index.html) database with our ex
 - Install Python 3.10+ and dependencies:
 
 ```cmd
-cd /d d:\test\TreeBASEMirror-main
 python -m pip install -r requirements.txt
 ```
 

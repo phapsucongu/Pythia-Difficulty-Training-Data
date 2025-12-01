@@ -1,0 +1,48 @@
+(((taxon6:0.08758,(taxon2:0.07026,(taxon3:0.08695,taxon4:0.06684)Inner3:0.00098)Inner4:0.00537)Inner5:0.00197,taxon5:0.07432)Inner6:0.00191,((taxon8:0.05793,taxon7:0.05364)Inner1:0.02166,taxon9:0.08565)Inner2:0.00276,taxon1:0.09533)Inner7:0.00000;
+[&R] TREE_0
+(((taxon9:0.08565,(taxon8:0.05793,taxon7:0.05364)Inner1:0.02166)Inner2:0.00276,taxon1:0.09533)Inner6:0.00191,(taxon6:0.08758,((taxon3:0.08695,taxon4:0.06684)Inner3:0.00098,taxon2:0.07026)Inner4:0.00537)Inner5:0.00197,taxon5:0.07432)Inner7:0.00000;
+[&R] TREE_1
+((((taxon7:0.05364,taxon8:0.05793)Inner1:0.02166,taxon9:0.08565)Inner2:0.00276,taxon1:0.09533)Inner6:0.00191,((taxon2:0.07026,(taxon4:0.06684,taxon3:0.08695)Inner3:0.00098)Inner4:0.00537,taxon6:0.08758)Inner5:0.00197,taxon5:0.07432)Inner7:0.00000;
+[&R] TREE_2
+((taxon5:0.07432,(taxon6:0.08758,(taxon2:0.07026,(taxon4:0.06684,taxon3:0.08695)Inner3:0.00098)Inner4:0.00537)Inner5:0.00197)Inner6:0.00191,(taxon9:0.08565,(taxon8:0.05793,taxon7:0.05364)Inner1:0.02166)Inner2:0.00276,taxon1:0.09533)Inner7:0.00000;
+[&R] TREE_3
+((taxon6:0.08758,((taxon4:0.06684,taxon3:0.08695)Inner3:0.00098,taxon2:0.07026)Inner4:0.00537)Inner5:0.00197,((taxon9:0.08565,(taxon7:0.05364,taxon8:0.05793)Inner1:0.02166)Inner2:0.00276,taxon1:0.09533)Inner6:0.00191,taxon5:0.07432)Inner7:0.00000;
+[&R] TREE_4
+(taxon1:0.09533,((taxon6:0.08758,(taxon2:0.07026,(taxon4:0.06684,taxon3:0.08695)Inner3:0.00098)Inner4:0.00537)Inner5:0.00197,taxon5:0.07432)Inner6:0.00191,(taxon9:0.08565,(taxon8:0.05793,taxon7:0.05364)Inner1:0.02166)Inner2:0.00276)Inner7:0.00000;
+[&R] TREE_5
+((taxon9:0.08565,(taxon7:0.05364,taxon8:0.05793)Inner1:0.02166)Inner2:0.00276,(taxon5:0.07432,(taxon6:0.08758,(taxon2:0.07026,(taxon4:0.06684,taxon3:0.08695)Inner3:0.00098)Inner4:0.00537)Inner5:0.00197)Inner6:0.00191,taxon1:0.09533)Inner7:0.00000;
+[&R] TREE_6
+((taxon1:0.09533,(taxon9:0.08565,(taxon7:0.05364,taxon8:0.05793)Inner1:0.02166)Inner2:0.00276)Inner6:0.00191,(taxon6:0.08758,(taxon2:0.07026,(taxon3:0.08695,taxon4:0.06684)Inner3:0.00098)Inner4:0.00537)Inner5:0.00197,taxon5:0.07432)Inner7:0.00000;
+[&R] TREE_7
+((taxon5:0.07432,(taxon6:0.08758,(taxon2:0.07026,(taxon4:0.06684,taxon3:0.08695)Inner3:0.00098)Inner4:0.00537)Inner5:0.00197)Inner6:0.00191,(taxon9:0.08565,(taxon8:0.05793,taxon7:0.05364)Inner1:0.02166)Inner2:0.00276,taxon1:0.09533)Inner7:0.00000;
+[&R] TREE_8
+(((taxon2:0.07026,(taxon3:0.08695,taxon4:0.06684)Inner3:0.00098)Inner4:0.00537,taxon6:0.08758)Inner5:0.00197,(taxon1:0.09533,(taxon9:0.08565,(taxon8:0.05793,taxon7:0.05364)Inner1:0.02166)Inner2:0.00276)Inner6:0.00191,taxon5:0.07432)Inner7:0.00000;
+[&R] TREE_9
+(((taxon6:0.08758,(taxon2:0.07026,(taxon3:0.08695,taxon4:0.06684)Inner3:0.00098)Inner4:0.00537)Inner5:0.00197,taxon5:0.07432)Inner6:0.00191,((taxon8:0.05793,taxon7:0.05364)Inner1:0.02166,taxon9:0.08565)Inner2:0.00276,taxon1:0.09533)Inner7:0.00000;
+[&R] TREE_10
+((taxon9:0.08565,(taxon7:0.05364,taxon8:0.05793)Inner1:0.02166)Inner2:0.00276,(taxon5:0.07432,((taxon2:0.07026,(taxon3:0.08695,taxon4:0.06684)Inner3:0.00098)Inner4:0.00537,taxon6:0.08758)Inner5:0.00197)Inner6:0.00191,taxon1:0.09533)Inner7:0.00000;
+[&R] TREE_11
+((taxon1:0.09533,((taxon8:0.05793,taxon7:0.05364)Inner1:0.02166,taxon9:0.08565)Inner2:0.00276)Inner6:0.00191,(taxon6:0.08758,(taxon2:0.07026,(taxon3:0.08695,taxon4:0.06684)Inner3:0.00098)Inner4:0.00537)Inner5:0.00197,taxon5:0.07432)Inner7:0.00000;
+[&R] TREE_12
+(((taxon8:0.05793,taxon7:0.05364)Inner1:0.02166,taxon9:0.08565)Inner2:0.00276,((taxon6:0.08758,(taxon2:0.07026,(taxon4:0.06684,taxon3:0.08695)Inner3:0.00098)Inner4:0.00537)Inner5:0.00197,taxon5:0.07432)Inner6:0.00191,taxon1:0.09533)Inner7:0.00000;
+[&R] TREE_13
+(((taxon6:0.08758,((taxon3:0.08695,taxon4:0.06684)Inner3:0.00098,taxon2:0.07026)Inner4:0.00537)Inner5:0.00197,taxon5:0.07432)Inner6:0.00191,(taxon9:0.08565,(taxon8:0.05793,taxon7:0.05364)Inner1:0.02166)Inner2:0.00276,taxon1:0.09533)Inner7:0.00000;
+[&R] TREE_14
+(((taxon9:0.08565,(taxon7:0.05364,taxon8:0.05793)Inner1:0.02166)Inner2:0.00276,taxon1:0.09533)Inner6:0.00191,(taxon6:0.08758,(taxon2:0.07026,(taxon4:0.06684,taxon3:0.08695)Inner3:0.00098)Inner4:0.00537)Inner5:0.00197,taxon5:0.07432)Inner7:0.00000;
+[&R] TREE_15
+((taxon1:0.09533,(taxon9:0.08565,(taxon8:0.05793,taxon7:0.05364)Inner1:0.02166)Inner2:0.00276)Inner6:0.00191,((taxon2:0.07026,(taxon3:0.08695,taxon4:0.06684)Inner3:0.00098)Inner4:0.00537,taxon6:0.08758)Inner5:0.00197,taxon5:0.07432)Inner7:0.00000;
+[&R] TREE_16
+((taxon6:0.08758,(taxon2:0.07026,(taxon3:0.08695,taxon4:0.06684)Inner3:0.00098)Inner4:0.00537)Inner5:0.00197,(((taxon7:0.05364,taxon8:0.05793)Inner1:0.02166,taxon9:0.08565)Inner2:0.00276,taxon1:0.09533)Inner6:0.00191,taxon5:0.07432)Inner7:0.00000;
+[&R] TREE_17
+((taxon6:0.08758,((taxon3:0.08695,taxon4:0.06684)Inner3:0.00098,taxon2:0.07026)Inner4:0.00537)Inner5:0.00197,(taxon1:0.09533,(taxon9:0.08565,(taxon7:0.05364,taxon8:0.05793)Inner1:0.02166)Inner2:0.00276)Inner6:0.00191,taxon5:0.07432)Inner7:0.00000;
+[&R] TREE_18
+((taxon1:0.09533,(taxon9:0.08565,(taxon7:0.05364,taxon8:0.05793)Inner1:0.02166)Inner2:0.00276)Inner6:0.00191,((taxon2:0.07026,(taxon3:0.08695,taxon4:0.06684)Inner3:0.00098)Inner4:0.00537,taxon6:0.08758)Inner5:0.00197,taxon5:0.07432)Inner7:0.00000;
+[&R] TREE_19
+((taxon6:0.08758,(taxon2:0.07026,(taxon4:0.06684,taxon3:0.08695)Inner3:0.00098)Inner4:0.00537)Inner5:0.00197,(taxon1:0.09533,(taxon9:0.08565,(taxon7:0.05364,taxon8:0.05793)Inner1:0.02166)Inner2:0.00276)Inner6:0.00191,taxon5:0.07432)Inner7:0.00000;
+[&R] TREE_20
+((taxon6:0.08758,(taxon2:0.07026,(taxon4:0.06684,taxon3:0.08695)Inner3:0.00098)Inner4:0.00537)Inner5:0.00197,((taxon9:0.08565,(taxon7:0.05364,taxon8:0.05793)Inner1:0.02166)Inner2:0.00276,taxon1:0.09533)Inner6:0.00191,taxon5:0.07432)Inner7:0.00000;
+[&R] TREE_21
+((taxon5:0.07432,(taxon6:0.08758,(taxon2:0.07026,(taxon3:0.08695,taxon4:0.06684)Inner3:0.00098)Inner4:0.00537)Inner5:0.00197)Inner6:0.00191,(taxon9:0.08565,(taxon7:0.05364,taxon8:0.05793)Inner1:0.02166)Inner2:0.00276,taxon1:0.09533)Inner7:0.00000;
+[&R] TREE_22
+((taxon9:0.08565,(taxon8:0.05793,taxon7:0.05364)Inner1:0.02166)Inner2:0.00276,((taxon6:0.08758,(taxon2:0.07026,(taxon3:0.08695,taxon4:0.06684)Inner3:0.00098)Inner4:0.00537)Inner5:0.00197,taxon5:0.07432)Inner6:0.00191,taxon1:0.09533)Inner7:0.00000;
+[&R] TREE_23

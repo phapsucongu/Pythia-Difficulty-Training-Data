@@ -1,0 +1,48 @@
+((taxon3:0.00348,((taxon12:0.09548,taxon2:0.03361)Inner4:0.02349,((taxon7:0.06471,(taxon5:0.00390,taxon9:0.05322)Inner1:0.02427)Inner2:0.04137,(taxon4:0.02113,(taxon1:0.04444,(taxon11:0.00778,taxon10:0.00377)Inner3:0.01169)Inner5:0.00998)Inner6:0.01350)Inner7:0.01225)Inner8:0.01244)Inner9:0.00362,taxon6:0.00351,taxon8:0.00838)Inner10:0.00000;
+[&R] TREE_0
+((((taxon12:0.09548,taxon2:0.03361)Inner4:0.02349,((taxon4:0.02113,(taxon1:0.04444,(taxon10:0.00377,taxon11:0.00778)Inner3:0.01169)Inner5:0.00998)Inner6:0.01350,(taxon7:0.06471,(taxon9:0.05322,taxon5:0.00390)Inner1:0.02427)Inner2:0.04137)Inner7:0.01225)Inner8:0.01244,taxon3:0.00348)Inner9:0.00362,taxon6:0.00351,taxon8:0.00838)Inner10:0.00000;
+[&R] TREE_1
+(taxon8:0.00838,(taxon3:0.00348,((taxon12:0.09548,taxon2:0.03361)Inner4:0.02349,(((taxon1:0.04444,(taxon11:0.00778,taxon10:0.00377)Inner3:0.01169)Inner5:0.00998,taxon4:0.02113)Inner6:0.01350,(taxon7:0.06471,(taxon9:0.05322,taxon5:0.00390)Inner1:0.02427)Inner2:0.04137)Inner7:0.01225)Inner8:0.01244)Inner9:0.00362,taxon6:0.00351)Inner10:0.00000;
+[&R] TREE_2
+((taxon3:0.00348,(((taxon4:0.02113,((taxon10:0.00377,taxon11:0.00778)Inner3:0.01169,taxon1:0.04444)Inner5:0.00998)Inner6:0.01350,(taxon7:0.06471,(taxon5:0.00390,taxon9:0.05322)Inner1:0.02427)Inner2:0.04137)Inner7:0.01225,(taxon2:0.03361,taxon12:0.09548)Inner4:0.02349)Inner8:0.01244)Inner9:0.00362,taxon8:0.00838,taxon6:0.00351)Inner10:0.00000;
+[&R] TREE_3
+((((taxon12:0.09548,taxon2:0.03361)Inner4:0.02349,((taxon4:0.02113,((taxon10:0.00377,taxon11:0.00778)Inner3:0.01169,taxon1:0.04444)Inner5:0.00998)Inner6:0.01350,(taxon7:0.06471,(taxon5:0.00390,taxon9:0.05322)Inner1:0.02427)Inner2:0.04137)Inner7:0.01225)Inner8:0.01244,taxon3:0.00348)Inner9:0.00362,taxon6:0.00351,taxon8:0.00838)Inner10:0.00000;
+[&R] TREE_4
+(((((taxon4:0.02113,(taxon1:0.04444,(taxon11:0.00778,taxon10:0.00377)Inner3:0.01169)Inner5:0.00998)Inner6:0.01350,(taxon7:0.06471,(taxon5:0.00390,taxon9:0.05322)Inner1:0.02427)Inner2:0.04137)Inner7:0.01225,(taxon12:0.09548,taxon2:0.03361)Inner4:0.02349)Inner8:0.01244,taxon3:0.00348)Inner9:0.00362,taxon6:0.00351,taxon8:0.00838)Inner10:0.00000;
+[&R] TREE_5
+((taxon3:0.00348,(((taxon4:0.02113,(taxon1:0.04444,(taxon11:0.00778,taxon10:0.00377)Inner3:0.01169)Inner5:0.00998)Inner6:0.01350,(taxon7:0.06471,(taxon5:0.00390,taxon9:0.05322)Inner1:0.02427)Inner2:0.04137)Inner7:0.01225,(taxon2:0.03361,taxon12:0.09548)Inner4:0.02349)Inner8:0.01244)Inner9:0.00362,taxon8:0.00838,taxon6:0.00351)Inner10:0.00000;
+[&R] TREE_6
+((taxon3:0.00348,((taxon2:0.03361,taxon12:0.09548)Inner4:0.02349,((taxon7:0.06471,(taxon9:0.05322,taxon5:0.00390)Inner1:0.02427)Inner2:0.04137,((taxon1:0.04444,(taxon10:0.00377,taxon11:0.00778)Inner3:0.01169)Inner5:0.00998,taxon4:0.02113)Inner6:0.01350)Inner7:0.01225)Inner8:0.01244)Inner9:0.00362,taxon8:0.00838,taxon6:0.00351)Inner10:0.00000;
+[&R] TREE_7
+((((taxon12:0.09548,taxon2:0.03361)Inner4:0.02349,((taxon7:0.06471,(taxon9:0.05322,taxon5:0.00390)Inner1:0.02427)Inner2:0.04137,(taxon4:0.02113,(taxon1:0.04444,(taxon10:0.00377,taxon11:0.00778)Inner3:0.01169)Inner5:0.00998)Inner6:0.01350)Inner7:0.01225)Inner8:0.01244,taxon3:0.00348)Inner9:0.00362,taxon6:0.00351,taxon8:0.00838)Inner10:0.00000;
+[&R] TREE_8
+((taxon8:0.00838,taxon6:0.00351)Inner9:0.00362,(((taxon4:0.02113,(taxon1:0.04444,(taxon11:0.00778,taxon10:0.00377)Inner3:0.01169)Inner5:0.00998)Inner6:0.01350,((taxon9:0.05322,taxon5:0.00390)Inner1:0.02427,taxon7:0.06471)Inner2:0.04137)Inner7:0.01225,(taxon12:0.09548,taxon2:0.03361)Inner4:0.02349)Inner8:0.01244,taxon3:0.00348)Inner10:0.00000;
+[&R] TREE_9
+((((taxon2:0.03361,taxon12:0.09548)Inner4:0.02349,((taxon7:0.06471,(taxon9:0.05322,taxon5:0.00390)Inner1:0.02427)Inner2:0.04137,((taxon1:0.04444,(taxon10:0.00377,taxon11:0.00778)Inner3:0.01169)Inner5:0.00998,taxon4:0.02113)Inner6:0.01350)Inner7:0.01225)Inner8:0.01244,taxon3:0.00348)Inner9:0.00362,taxon6:0.00351,taxon8:0.00838)Inner10:0.00000;
+[&R] TREE_10
+((((taxon4:0.02113,(taxon1:0.04444,(taxon11:0.00778,taxon10:0.00377)Inner3:0.01169)Inner5:0.00998)Inner6:0.01350,(taxon7:0.06471,(taxon9:0.05322,taxon5:0.00390)Inner1:0.02427)Inner2:0.04137)Inner7:0.01225,(taxon2:0.03361,taxon12:0.09548)Inner4:0.02349)Inner8:0.01244,(taxon8:0.00838,taxon6:0.00351)Inner9:0.00362,taxon3:0.00348)Inner10:0.00000;
+[&R] TREE_11
+(taxon8:0.00838,(((taxon2:0.03361,taxon12:0.09548)Inner4:0.02349,(((taxon5:0.00390,taxon9:0.05322)Inner1:0.02427,taxon7:0.06471)Inner2:0.04137,((taxon1:0.04444,(taxon11:0.00778,taxon10:0.00377)Inner3:0.01169)Inner5:0.00998,taxon4:0.02113)Inner6:0.01350)Inner7:0.01225)Inner8:0.01244,taxon3:0.00348)Inner9:0.00362,taxon6:0.00351)Inner10:0.00000;
+[&R] TREE_12
+((taxon6:0.00351,taxon8:0.00838)Inner9:0.00362,((taxon12:0.09548,taxon2:0.03361)Inner4:0.02349,(((taxon1:0.04444,(taxon10:0.00377,taxon11:0.00778)Inner3:0.01169)Inner5:0.00998,taxon4:0.02113)Inner6:0.01350,(taxon7:0.06471,(taxon9:0.05322,taxon5:0.00390)Inner1:0.02427)Inner2:0.04137)Inner7:0.01225)Inner8:0.01244,taxon3:0.00348)Inner10:0.00000;
+[&R] TREE_13
+((((taxon12:0.09548,taxon2:0.03361)Inner4:0.02349,((taxon7:0.06471,(taxon9:0.05322,taxon5:0.00390)Inner1:0.02427)Inner2:0.04137,(taxon4:0.02113,(taxon1:0.04444,(taxon11:0.00778,taxon10:0.00377)Inner3:0.01169)Inner5:0.00998)Inner6:0.01350)Inner7:0.01225)Inner8:0.01244,taxon3:0.00348)Inner9:0.00362,taxon6:0.00351,taxon8:0.00838)Inner10:0.00000;
+[&R] TREE_14
+((((taxon4:0.02113,(taxon1:0.04444,(taxon10:0.00377,taxon11:0.00778)Inner3:0.01169)Inner5:0.00998)Inner6:0.01350,(taxon7:0.06471,(taxon9:0.05322,taxon5:0.00390)Inner1:0.02427)Inner2:0.04137)Inner7:0.01225,(taxon12:0.09548,taxon2:0.03361)Inner4:0.02349)Inner8:0.01244,(taxon6:0.00351,taxon8:0.00838)Inner9:0.00362,taxon3:0.00348)Inner10:0.00000;
+[&R] TREE_15
+(((taxon12:0.09548,taxon2:0.03361)Inner4:0.02349,((taxon4:0.02113,(taxon1:0.04444,(taxon10:0.00377,taxon11:0.00778)Inner3:0.01169)Inner5:0.00998)Inner6:0.01350,(taxon7:0.06471,(taxon9:0.05322,taxon5:0.00390)Inner1:0.02427)Inner2:0.04137)Inner7:0.01225)Inner8:0.01244,(taxon8:0.00838,taxon6:0.00351)Inner9:0.00362,taxon3:0.00348)Inner10:0.00000;
+[&R] TREE_16
+((taxon3:0.00348,(((taxon7:0.06471,(taxon5:0.00390,taxon9:0.05322)Inner1:0.02427)Inner2:0.04137,(taxon4:0.02113,((taxon11:0.00778,taxon10:0.00377)Inner3:0.01169,taxon1:0.04444)Inner5:0.00998)Inner6:0.01350)Inner7:0.01225,(taxon2:0.03361,taxon12:0.09548)Inner4:0.02349)Inner8:0.01244)Inner9:0.00362,taxon8:0.00838,taxon6:0.00351)Inner10:0.00000;
+[&R] TREE_17
+((((taxon12:0.09548,taxon2:0.03361)Inner4:0.02349,(((taxon5:0.00390,taxon9:0.05322)Inner1:0.02427,taxon7:0.06471)Inner2:0.04137,(taxon4:0.02113,(taxon1:0.04444,(taxon11:0.00778,taxon10:0.00377)Inner3:0.01169)Inner5:0.00998)Inner6:0.01350)Inner7:0.01225)Inner8:0.01244,taxon3:0.00348)Inner9:0.00362,taxon6:0.00351,taxon8:0.00838)Inner10:0.00000;
+[&R] TREE_18
+((taxon3:0.00348,((taxon2:0.03361,taxon12:0.09548)Inner4:0.02349,(((taxon9:0.05322,taxon5:0.00390)Inner1:0.02427,taxon7:0.06471)Inner2:0.04137,((taxon1:0.04444,(taxon10:0.00377,taxon11:0.00778)Inner3:0.01169)Inner5:0.00998,taxon4:0.02113)Inner6:0.01350)Inner7:0.01225)Inner8:0.01244)Inner9:0.00362,taxon6:0.00351,taxon8:0.00838)Inner10:0.00000;
+[&R] TREE_19
+((taxon3:0.00348,((taxon12:0.09548,taxon2:0.03361)Inner4:0.02349,((taxon7:0.06471,(taxon5:0.00390,taxon9:0.05322)Inner1:0.02427)Inner2:0.04137,(taxon4:0.02113,((taxon11:0.00778,taxon10:0.00377)Inner3:0.01169,taxon1:0.04444)Inner5:0.00998)Inner6:0.01350)Inner7:0.01225)Inner8:0.01244)Inner9:0.00362,taxon6:0.00351,taxon8:0.00838)Inner10:0.00000;
+[&R] TREE_20
+((taxon3:0.00348,((taxon12:0.09548,taxon2:0.03361)Inner4:0.02349,((taxon4:0.02113,(taxon1:0.04444,(taxon11:0.00778,taxon10:0.00377)Inner3:0.01169)Inner5:0.00998)Inner6:0.01350,(taxon7:0.06471,(taxon5:0.00390,taxon9:0.05322)Inner1:0.02427)Inner2:0.04137)Inner7:0.01225)Inner8:0.01244)Inner9:0.00362,taxon8:0.00838,taxon6:0.00351)Inner10:0.00000;
+[&R] TREE_21
+((((taxon2:0.03361,taxon12:0.09548)Inner4:0.02349,((taxon7:0.06471,(taxon9:0.05322,taxon5:0.00390)Inner1:0.02427)Inner2:0.04137,(taxon4:0.02113,((taxon10:0.00377,taxon11:0.00778)Inner3:0.01169,taxon1:0.04444)Inner5:0.00998)Inner6:0.01350)Inner7:0.01225)Inner8:0.01244,taxon3:0.00348)Inner9:0.00362,taxon6:0.00351,taxon8:0.00838)Inner10:0.00000;
+[&R] TREE_22
+((taxon3:0.00348,((taxon12:0.09548,taxon2:0.03361)Inner4:0.02349,((taxon7:0.06471,(taxon9:0.05322,taxon5:0.00390)Inner1:0.02427)Inner2:0.04137,(taxon4:0.02113,((taxon11:0.00778,taxon10:0.00377)Inner3:0.01169,taxon1:0.04444)Inner5:0.00998)Inner6:0.01350)Inner7:0.01225)Inner8:0.01244)Inner9:0.00362,taxon8:0.00838,taxon6:0.00351)Inner10:0.00000;
+[&R] TREE_23

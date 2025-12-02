@@ -7,6 +7,8 @@ from Bio import AlignIO
 from Bio.Phylo.TreeConstruction import DistanceCalculator, DistanceTreeConstructor
 from Bio import Phylo
 from collections import Counter
+import math
+
 
 # Load MSA file (FASTA format)
 def load_msa(filepath, format=None):
@@ -27,6 +29,7 @@ def load_msa(filepath, format=None):
         print(f"Failed to load {filepath} (format={format}): {e}")
         return None
 
+
 # % parsimony-informative and variable sites
 def compute_variable_and_parsimony_sites(alignment):
     n_sites = alignment.get_alignment_length()
@@ -41,6 +44,7 @@ def compute_variable_and_parsimony_sites(alignment):
                 pis += 1
     return 100 * pis / n_sites, 100 * variable / n_sites
 
+
 # RCV
 def compute_rcv(msa_array, alphabet):
     total_taxa, total_sites = msa_array.shape
@@ -54,6 +58,7 @@ def compute_rcv(msa_array, alphabet):
         rcv += sum(abs(freqs_t[b] - freqs[b]) for b in alphabet)
     return rcv / total_taxa * 100
 
+
 # RCVT
 def compute_rcvt(msa_array, alphabet):
     total_sites = msa_array.shape[1]
@@ -65,25 +70,25 @@ def compute_rcvt(msa_array, alphabet):
         rcvt_list.append(rcvt)
     return np.mean(rcvt_list) * 100
 
-# Treeness from UPGMA tree
-def compute_treeness(alignment):
-    calculator = DistanceCalculator("identity")
-    dm = calculator.get_distance(alignment)
-    constructor = DistanceTreeConstructor()
-    tree = constructor.upgma(dm)
+
+# Treeness từ cây UPGMA đã build
+def compute_treeness(tree):
     total_branch_length = tree.total_branch_length()
     internal_branch_length = sum(
-        clade.branch_length for clade in tree.get_nonterminals() if clade.branch_length
+        (clade.branch_length or 0.0)
+        for clade in tree.get_nonterminals()
     )
     if total_branch_length == 0:
         return 0.0
     return internal_branch_length / total_branch_length * 100
+
 
 # Long Branch Score: std of terminal branch lengths
 def compute_lb_score(tree):
     tips = tree.get_terminals()
     lengths = [t.branch_length for t in tips if t.branch_length is not None]
     return np.std(lengths) if lengths else np.nan
+
 
 # Column entropy standard deviation
 def compute_column_entropy_std(msa_array):
@@ -95,9 +100,10 @@ def compute_column_entropy_std(msa_array):
         ce_list.append(entropy(probs, base=2))
     return float(np.std(ce_list)) if ce_list else np.nan
 
-# Main function to process a list of MSA files
+
 def analyze_msa_list(msa_files, output_csv="msa_features_output.csv", alphabet="ACGT"):
     import csv
+    import math
 
     fieldnames = [
         "filename",
@@ -117,11 +123,20 @@ def analyze_msa_list(msa_files, output_csv="msa_features_output.csv", alphabet="
     ]
 
     write_header = True
-    try:
-        if os.path.exists(output_csv) and os.path.getsize(output_csv) > 0:
+    processed_files = set()
+
+    # Nếu CSV đã tồn tại thì:
+    # 1. Không ghi header nữa
+    # 2. Đọc cột 'filename' để biết những file nào đã xử lý => resume
+    if os.path.exists(output_csv) and os.path.getsize(output_csv) > 0:
+        try:
+            df_prev = pd.read_csv(output_csv, usecols=["filename"])
+            processed_files = set(df_prev["filename"].astype(str))
             write_header = False
-    except Exception:
-        write_header = True
+            print(f"Found {len(processed_files)} already processed alignments in {output_csv}, will skip them.")
+        except Exception as e:
+            print(f"Warning: cannot read existing {output_csv} for resume: {e}")
+            write_header = True
 
     with open(output_csv, "a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -129,39 +144,92 @@ def analyze_msa_list(msa_files, output_csv="msa_features_output.csv", alphabet="
             writer.writeheader()
 
         rows = []
-        for filepath in msa_files:
+        # vẫn giữ reversed nếu bạn muốn giữ thứ tự cũ
+        for filepath in reversed(msa_files):
+
+            # *** SKIP FILE ĐÃ XỬ LÝ ***
+            if filepath in processed_files:
+                print(f"Skipping already processed file: {filepath}")
+                continue
+
             alignment = load_msa(filepath)
             if alignment is None:
                 continue
-            msa_array = np.array([list(rec.seq.upper()) for rec in alignment], dtype=str)
-            pis_pct, var_pct = compute_variable_and_parsimony_sites(alignment)
-            rcv = compute_rcv(msa_array, alphabet)
-            rcvt = compute_rcvt(msa_array, alphabet)
-            calculator = DistanceCalculator("identity")
-            dm = calculator.get_distance(alignment)
-            constructor = DistanceTreeConstructor()
-            tree = constructor.upgma(dm)
-            treeness = compute_treeness(alignment)
-            lb_score = compute_lb_score(tree)
 
+            msa_array = np.array(
+                [list(str(rec.seq).upper()) for rec in alignment],
+                dtype=str
+            )
+
+            # Các chỉ số không phụ thuộc cây
+            try:
+                pis_pct, var_pct = compute_variable_and_parsimony_sites(alignment)
+            except Exception as e:
+                print(f"Warning: failed PI/variable for {filepath}: {e}")
+                pis_pct, var_pct = float("nan"), float("nan")
+
+            try:
+                rcv = compute_rcv(msa_array, alphabet)
+            except Exception as e:
+                print(f"Warning: failed RCV for {filepath}: {e}")
+                rcv = float("nan")
+
+            try:
+                rcvt = compute_rcvt(msa_array, alphabet)
+            except Exception as e:
+                print(f"Warning: failed RCVT for {filepath}: {e}")
+                rcvt = float("nan")
+
+            # Các chỉ số dùng cây UPGMA: bọc trong try/except
+            try:
+                calculator = DistanceCalculator("identity")
+                dm = calculator.get_distance(alignment)
+                constructor = DistanceTreeConstructor()
+                tree = constructor.upgma(dm)
+
+                treeness = compute_treeness(tree)
+                lb_score = compute_lb_score(tree)
+            except Exception as e:
+                print(
+                    f"WARNING: failed tree-based metrics for {filepath}: {e}. "
+                    f"Setting Treeness and LB score to NaN."
+                )
+                treeness = float("nan")
+                lb_score = float("nan")
+
+            # Các chỉ số còn lại từ msa_array
             num_sites = msa_array.shape[1]
             num_taxa = msa_array.shape[0]
             prop_gaps = np.sum(msa_array == '-') / msa_array.size
-            prop_inv = 1 - (var_pct / 100)
+            prop_inv = 1 - (var_pct / 100) if not math.isnan(var_pct) else float("nan")
+
             degree_dispersion_missing = prop_gaps * num_taxa
-            average_amount_actual = (1 - prop_gaps) * (1 - prop_inv) * num_sites
+            if not math.isnan(prop_inv):
+                average_amount_actual = (1 - prop_gaps) * (1 - prop_inv) * num_sites
+            else:
+                average_amount_actual = float("nan")
 
             flat = msa_array.flatten()
-            freq_a = np.sum(flat == 'A') / flat.size * 100
-            freq_c = np.sum(flat == 'C') / flat.size * 100
-            freq_g = np.sum(flat == 'G') / flat.size * 100
-            freq_t = np.sum(flat == 'T') / flat.size * 100
+            total_flat = flat.size if flat.size > 0 else 1
+            freq_a = np.sum(flat == 'A') / total_flat * 100
+            freq_c = np.sum(flat == 'C') / total_flat * 100
+            freq_g = np.sum(flat == 'G') / total_flat * 100
+            freq_t = np.sum(flat == 'T') / total_flat * 100
 
-            ce_std = compute_column_entropy_std(msa_array)
+            try:
+                ce_std = compute_column_entropy_std(msa_array)
+            except Exception as e:
+                print(f"Warning: failed ce_std for {filepath}: {e}")
+                ce_std = float("nan")
 
             print(
-                f"Processed {filepath}: PI%={pis_pct:.2f}, Var%={var_pct:.2f}, RCV={rcv:.2f}, RCVT={rcvt:.2f}, Treeness={treeness:.2f}, LB Score={lb_score:.2f}, ce_std={ce_std:.4f}"
+                f"Processed {filepath}: "
+                f"PI%={pis_pct:.2f} Var%={var_pct:.2f} "
+                f"RCV={rcv:.2f} RCVT={rcvt:.2f} "
+                f"Treeness={treeness:.2f} LB Score={lb_score:.2f} "
+                f"ce_std={ce_std:.4f}"
             )
+
             row = {
                 "filename": filepath,
                 "% parsimony-informative": pis_pct,
@@ -181,6 +249,7 @@ def analyze_msa_list(msa_files, output_csv="msa_features_output.csv", alphabet="
             writer.writerow(row)
             f.flush()
             rows.append(row)
+
     df = pd.DataFrame(rows)
     return df
 
@@ -197,7 +266,6 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(
         description="Batch compute MSA-derived features for all alignment files under a directory."
     )
-    # Re-added missing arguments
     parser.add_argument(
         "--input-dir",
         default="output",

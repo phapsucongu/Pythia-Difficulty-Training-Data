@@ -17,6 +17,7 @@ env/
 *.gz
 *.tar.gz
 
-
+output/
+.vscode/
 
 trees/*/msa.fasta
